@@ -1,164 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team Walk Up</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
+    <section class="play-action">
+      <div>
+        <h1>Click play to get started</h1>
+        <button class="cta">Play</button>
+      </div>
+    </section>
     <section class="running">
-        <audio controls autoplay>
-            <source src="./assets/audio/Barclays Premier League 2010_13.m4a" type="audio/mpeg">
-        </audio>
+      <audio controls autoplay>
+        <source
+          src="./assets/audio/Barclays Premier League 2010_13.m4a"
+          type="audio/mpeg"
+        />
+      </audio>
 
-        <div id="ITeam" class="main">
-            <div class="">
-                <img class="title_drop" src="./assets/images/title_drop.png" alt="tournament-title">
-            </div>
-            <div class="header">
-                DL CUP 20/21
-            </div>
-            <div class="formation">
-                <span id="p">GK</span>
-                <span id="p1">2</span>
-                <span id="p2">1</span>
-                <span id="p3">2</span>
-                <span id="p4">1</span>
-            </div>
-            <canvas id="field" width="1000" height="600"></canvas>
-            <div class="team_name">
-                <div class="hide">IT</div>
-                <img id="ITgorilla" src="./assets/images/ITGorilla.svg" alt="">
-            </div>
-            <div class="tiles">
-                <video muted id="v1" class="test_video" src="./assets/videos/IT/Mike.mp4"></video>
-                <div id="GK" class="names">
-                    Mike
-                </div>
-
-                <video muted id="v2" class="test_video" src="./assets/videos/IT/Barok.mp4"></video>
-                <div id="LCB" class="names">
-                    Barok
-                </div>
-
-                <video muted id="v3" class="test_video" src="./assets/videos/IT/Zekarias.mp4"></video>
-                <div id="RCB" class="names">
-                    Zekarias
-                </div>
-
-                <video muted id="v4" class="test_video" src="./assets/videos/IT/Yonathan.mp4"></video>
-                <div id="CM" class="names">
-                    Yonathan
-                </div>
-
-                <video muted id="v5" class="test_video" src="./assets/videos/IT/Kevin.mp4"></video>
-                <div id="LCF" class="names">
-                    Kevin
-                </div>
-
-                <video muted id="v6" class="test_video" src="./assets/videos/IT/Tekle.mp4"></video>
-                <div id="RCF" class="names">
-                    Tekle
-                </div>
-
-                <!-- <video muted id="v7" class="test_video" src="./assets/videos/test.mp4"></video> -->
-                <img id="v7" class="missing" src="./assets/images/missing.png" alt="">
-                <div id="CF" class="names">
-                    Beken
-                </div>
-            </div>
+      <div id="ITeam" class="main">
+        <div class="">
+          <img
+            class="title_drop"
+            src="./assets/images/title_drop.png"
+            alt="tournament-title"
+          />
         </div>
-
-        <div class="horizontal-animation">
-            <div id="d1"></div>
-            <div id="d2"></div>
-            <div id="d3"></div>
-            <div id="d4"></div>
+        <div class="header">DL CUP 20/21</div>
+        <div class="formation">
+          <span id="p">GK</span>
+          <span id="p1">2</span>
+          <span id="p2">1</span>
+          <span id="p3">2</span>
+          <span id="p4">1</span>
         </div>
-
-        <div id="biomed" class="main">
-            <div class="header">
-                DL CUP 20/21
-            </div>
-            <div class="formation">
-                <span id="ps">GK</span>
-                <span id="ps1">2</span>
-                <span id="ps2">1</span>
-                <span id="ps3">2</span>
-                <span id="ps4">1</span>
-            </div>
-            <canvas id="field2" width="1000" height="600"></canvas>
-
-            <div class="team_name">
-                <div class="hide2">Biomed</div>
-                <img id="biomedTiger" src="./assets/images/biomedTiger.png" alt="">
-            </div>
-            <div class="tiles">
-                <video muted id="v8" class="test_video" src="./assets/videos/Biomed/Yared.mp4"></video>
-                <div id="GK2" class="names">
-                    Yared
-                </div>
-                <video muted id="v9" class="test_video" src="./assets/videos/Biomed/Yonathan G.mp4"></video>
-                <div id="LCB2" class="names">
-                    Yonathan
-                </div>
-
-                <video muted id="v10" class="test_video" src="./assets/videos/Biomed/Sador.mp4"></video>
-                <div id="RCB2" class="names">
-                    Sador
-                </div>
-
-                <!-- <video muted id="v11" class="test_video" src="./assets/videos/test.mp4"></video> -->
-                <img id="v11" class="missing" src="./assets/images/missing.png" alt="">
-                <div id="CDM" class="names">
-                    Mikiyas
-                </div>
-
-                <!-- <video muted id="v12" class="test_video" src="./assets/videos/test.mp4"></video> -->
-                <img id="v12" class="missing" src="./assets/images/missing.png" alt="">
-                <div id="LCM" class="names">
-                    Gemechis
-                </div>
-
-                <video muted id="v13" class="test_video" src="./assets/videos/Biomed/MIke.MOV"></video>
-                <div id="RCM" class="names">
-                    Mike
-                </div>
-
-                <video muted id="v14" class="test_video" src="./assets/videos/Biomed/Kaleb.mp4"></video>
-                <div id="CF2" class="names">
-                    Kaleb
-                </div>
-            </div>
+        <canvas id="field" width="1000" height="600"></canvas>
+        <div class="team_name">
+          <div class="hide">IT</div>
+          <img id="ITgorilla" src="./assets/images/ITGorilla.svg" alt="" />
         </div>
+        <div class="tiles">
+          <video
+            muted
+            id="v1"
+            class="test_video"
+            src="./assets/videos/IT/Mike.mp4"
+          ></video>
+          <div id="GK" class="names">Mike</div>
+
+          <video
+            muted
+            id="v2"
+            class="test_video"
+            src="./assets/videos/IT/Barok.mp4"
+          ></video>
+          <div id="LCB" class="names">Barok</div>
+
+          <video
+            muted
+            id="v3"
+            class="test_video"
+            src="./assets/videos/IT/Zekarias.mp4"
+          ></video>
+          <div id="RCB" class="names">Zekarias</div>
+
+          <video
+            muted
+            id="v4"
+            class="test_video"
+            src="./assets/videos/IT/Yonathan.mp4"
+          ></video>
+          <div id="CM" class="names">Yonathan</div>
+
+          <video
+            muted
+            id="v5"
+            class="test_video"
+            src="./assets/videos/IT/Kevin.mp4"
+          ></video>
+          <div id="LCF" class="names">Kevin</div>
+
+          <video
+            muted
+            id="v6"
+            class="test_video"
+            src="./assets/videos/IT/Tekle.mp4"
+          ></video>
+          <div id="RCF" class="names">Tekle</div>
+
+          <!-- <video muted id="v7" class="test_video" src="./assets/videos/test.mp4"></video> -->
+          <img
+            id="v7"
+            class="missing"
+            src="./assets/images/missing.png"
+            alt=""
+          />
+          <div id="CF" class="names">Beken</div>
+        </div>
+      </div>
+
+      <div class="horizontal-animation">
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+      </div>
+
+      <div id="biomed" class="main">
+        <div class="header">DL CUP 20/21</div>
+        <div class="formation">
+          <span id="ps">GK</span>
+          <span id="ps1">2</span>
+          <span id="ps2">1</span>
+          <span id="ps3">2</span>
+          <span id="ps4">1</span>
+        </div>
+        <canvas id="field2" width="1000" height="600"></canvas>
+
+        <div class="team_name">
+          <div class="hide2">Biomed</div>
+          <img id="biomedTiger" src="./assets/images/biomedTiger.png" alt="" />
+        </div>
+        <div class="tiles">
+          <video
+            muted
+            id="v8"
+            class="test_video"
+            src="./assets/videos/Biomed/Yared.mp4"
+          ></video>
+          <div id="GK2" class="names">Yared</div>
+          <video
+            muted
+            id="v9"
+            class="test_video"
+            src="./assets/videos/Biomed/Yonathan G.mp4"
+          ></video>
+          <div id="LCB2" class="names">Yonathan</div>
+
+          <video
+            muted
+            id="v10"
+            class="test_video"
+            src="./assets/videos/Biomed/Sador.mp4"
+          ></video>
+          <div id="RCB2" class="names">Sador</div>
+
+          <!-- <video muted id="v11" class="test_video" src="./assets/videos/test.mp4"></video> -->
+          <img
+            id="v11"
+            class="missing"
+            src="./assets/images/missing.png"
+            alt=""
+          />
+          <div id="CDM" class="names">Mikiyas</div>
+
+          <!-- <video muted id="v12" class="test_video" src="./assets/videos/test.mp4"></video> -->
+          <img
+            id="v12"
+            class="missing"
+            src="./assets/images/missing.png"
+            alt=""
+          />
+          <div id="LCM" class="names">Gemechis</div>
+
+          <video
+            muted
+            id="v13"
+            class="test_video"
+            src="./assets/videos/Biomed/MIke.MOV"
+          ></video>
+          <div id="RCM" class="names">Mike</div>
+
+          <video
+            muted
+            id="v14"
+            class="test_video"
+            src="./assets/videos/Biomed/Kaleb.mp4"
+          ></video>
+          <div id="CF2" class="names">Kaleb</div>
+        </div>
+      </div>
     </section>
     <section class="ending">
-        <div class="reverse-horizontal-animation">
-            <div id="dr1"></div>
-            <div id="dr2"></div>
-            <div id="dr3"></div>
-            <div id="dr4"></div>
-        </div>
-    
-        <div id="end" class="main">
-            <img src="./assets/images/title_drop.png" alt="">
-        </div>
+      <div class="reverse-horizontal-animation">
+        <div id="dr1"></div>
+        <div id="dr2"></div>
+        <div id="dr3"></div>
+        <div id="dr4"></div>
+      </div>
+
+      <div id="end" class="main">
+        <img src="./assets/images/title_drop.png" alt="" />
+      </div>
     </section>
 
     <script src="./assets/js/canvas.js"></script>
     <script src="./assets/js/videoplay.js"></script>
     <script>
-        audio_file = document.querySelector('audio');
-        audio_file.currentTime = 16;
+      let audio_file = document.querySelector("audio");
+      audio_file.currentTime = 16;
     </script>
-</body>
-
+  </body>
 </html>
