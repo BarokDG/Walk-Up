@@ -12,6 +12,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+section {
+  content-visibility: auto;
+}
+
 .main {
   background-color: #411f73;
   height: 100vh;
@@ -34,18 +38,24 @@ body {
   place-items: center;
 }
 
-.play-action.hidden {
-  display: none;
+.play-action.transition-out {
+  animation: fade-out 1000ms forwards linear;
 }
 
-.play-action div {
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.cta-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: visible;
 }
 
-.play-action h1 {
+.cta-header {
   color: hsl(256, 78%, 52%);
   font-size: 2rem;
   margin-bottom: 1rem;

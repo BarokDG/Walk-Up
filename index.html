@@ -17,13 +17,13 @@
 
   <body>
     <section class="play-action">
-      <div>
-        <h1>Click play to get started</h1>
+      <div class="cta-wrapper">
+        <h1 class="cta-header">Click play to get started</h1>
         <button class="cta">Play</button>
       </div>
     </section>
     <section class="running">
-      <audio controls autoplay>
+      <audio controls style="display: none">
         <source
           src="./assets/audio/Barclays Premier League 2010_13.m4a"
           type="audio/mpeg"
@@ -209,8 +209,27 @@
     <script src="./assets/js/canvas.js"></script>
     <script src="./assets/js/videoplay.js"></script>
     <script>
-      let audio_file = document.querySelector("audio");
-      audio_file.currentTime = 16;
+      "use strict";
+      const startButton = document.querySelector(".play-action .cta");
+      const body = document.querySelector("body");
+      const playSection = document.querySelector(".play-action");
+
+      const audio = document.querySelector("audio");
+      const audioStart = 16;
+      audio.currentTime = audioStart;
+
+      startButton.addEventListener("click", handleButtonClick);
+
+      function handleButtonClick() {
+        playSection.classList.add("transition-out");
+        body.style.setProperty("--play-state", "running");
+        startPlayback();
+
+        const timerId = setTimeout(() => {
+          audio.play();
+          clearTimeout(timerId);
+        }, 3000);
+      }
     </script>
   </body>
 </html>
