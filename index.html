@@ -16,6 +16,10 @@
   </head>
 
   <body>
+    <div class="controls">
+      <button class="pause-btn" onclick="pausePlayback()">Pause</button>
+      <button class="resume-btn" onclick="resumePlayback()">Resume</button>
+    </div>
     <section class="play-action">
       <div class="cta-wrapper">
         <h1 class="cta-header">Click play to get started</h1>
@@ -225,6 +229,8 @@
       const audioStart = 16;
       audio.currentTime = audioStart;
 
+      let isPlaybackPaused = false;
+
       startButton.addEventListener("click", handleButtonClick);
 
       function handleButtonClick() {
@@ -248,6 +254,24 @@
             clearInterval(timerId);
           }
         }, 5000);
+      }
+
+      function pausePlayback() {
+        if (isPlaybackPaused) return;
+
+        body.style.setProperty("--play-state", "paused");
+        audio.pause();
+
+        isPlaybackPaused = true;
+      }
+
+      function resumePlayback() {
+        if (!isPlaybackPaused) return;
+
+        body.style.setProperty("--play-state", "running");
+        audio.play();
+
+        isPlaybackPaused = false;
       }
 
       function unhideRestartButton() {

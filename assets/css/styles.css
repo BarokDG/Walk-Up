@@ -29,7 +29,7 @@ body {
   bottom: 0;
 
   background: hsl(256, 88%, 88%);
-  z-index: 10000;
+  z-index: 10001;
 
   display: grid;
   place-items: center;
@@ -47,6 +47,7 @@ body {
 @keyframes fade-out {
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -91,6 +92,35 @@ body {
   outline-offset: 2px;
 }
 
+.controls {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 9999;
+
+  display: flex;
+  gap: 0.4rem;
+}
+
+.controls button {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+}
+
+.resume-btn {
+  background: hsl(140, 85%, 69%);
+  color: hsl(132, 80%, 13%);
+}
+
+.pause-btn {
+  background: none;
+}
+/* Main animation */
+/* ================ */
+/* ================ */
+/* ================ */
 .title_drop {
   animation: drop 3s;
   bottom: 0;
