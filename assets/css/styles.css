@@ -12,10 +12,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-section {
-  content-visibility: auto;
-}
-
 .main {
   background-color: #411f73;
   height: 100vh;
@@ -24,7 +20,8 @@ section {
   width: 70vw;
 }
 
-.play-action {
+.play-action,
+.play-again {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,6 +35,11 @@ section {
   place-items: center;
 }
 
+.play-again {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .play-action.transition-out {
   animation: fade-out 1000ms forwards linear;
 }
@@ -45,6 +47,19 @@ section {
 @keyframes fade-out {
   to {
     opacity: 0;
+  }
+}
+
+.play-again.transition-in {
+  --play-state: running;
+
+  animation: fade-in 1000ms forwards linear;
+  visibility: visible;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
   }
 }
 

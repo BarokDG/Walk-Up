@@ -22,6 +22,12 @@
         <button class="cta">Play</button>
       </div>
     </section>
+    <section class="play-again">
+      <div class="cta-wrapper">
+        <h1 class="cta-header">Play again?</h1>
+        <button class="cta" onclick="window.location.reload()">Restart</button>
+      </div>
+    </section>
     <section class="running">
       <audio controls style="display: none">
         <source
@@ -213,6 +219,7 @@
       const startButton = document.querySelector(".play-action .cta");
       const body = document.querySelector("body");
       const playSection = document.querySelector(".play-action");
+      const restartSection = document.querySelector(".play-again");
 
       const audio = document.querySelector("audio");
       const audioStart = 16;
@@ -227,8 +234,24 @@
 
         const timerId = setTimeout(() => {
           audio.play();
+          trackAudioPlay();
           clearTimeout(timerId);
         }, 3000);
+      }
+
+      function trackAudioPlay() {
+        let timerId = setInterval(() => {
+          if (audio.currentTime >= 85) {
+            audio.pause();
+            audio.currentTime = audioStart;
+            unhideRestartButton();
+            clearInterval(timerId);
+          }
+        }, 5000);
+      }
+
+      function unhideRestartButton() {
+        restartSection.classList.add("transition-in");
       }
     </script>
   </body>
