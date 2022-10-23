@@ -257,7 +257,7 @@ body {
   width: 15vw;
 }
 
-.test_video {
+.video {
   animation: scale-up 5s;
   animation-fill-mode: forwards;
   position: absolute;
@@ -325,8 +325,15 @@ body {
     top: 0;
   }
 
+  95% {
+    height: auto;
+  }
+
   100% {
-    width: 5vw;
+    width: 8vw;
+    height: 160px;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
@@ -349,8 +356,8 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  height: 4vh;
-  width: 7vw;
+  height: max-content;
+  width: 8vw;
   font-size: 1.3rem;
   text-align: center;
   z-index: 1000;
@@ -360,14 +367,14 @@ body {
   animation: reveal 2s;
   animation-delay: 12500ms;
   animation-fill-mode: forwards;
-  top: -250px;
+  top: -180px;
 }
 
 #LCB {
   animation: reveal 2s;
   animation-delay: 17500ms;
   animation-fill-mode: forwards;
-  top: 50px;
+  top: 136px;
   left: -400px;
   z-index: 1499;
 }
@@ -376,7 +383,7 @@ body {
   animation: reveal 2s;
   animation-delay: 17500ms;
   animation-fill-mode: forwards;
-  top: 50px;
+  top: 136px;
   left: 400px;
   z-index: 1499;
 }
@@ -385,7 +392,7 @@ body {
   animation: reveal 2s;
   animation-delay: 22500ms;
   animation-fill-mode: forwards;
-  top: 250px;
+  top: 336px;
   z-index: 2000;
 }
 
@@ -393,7 +400,7 @@ body {
   animation: reveal 2s;
   animation-delay: 27500ms;
   animation-fill-mode: forwards;
-  top: 450px;
+  top: 536px;
   left: -500px;
   z-index: 3000;
 }
@@ -402,7 +409,7 @@ body {
   animation: reveal 2s;
   animation-delay: 27500ms;
   animation-fill-mode: forwards;
-  top: 450px;
+  top: 536px;
   left: 500px;
   z-index: 3000;
 }
@@ -411,7 +418,7 @@ body {
   animation: reveal 2s;
   animation-delay: 29500ms;
   animation-fill-mode: forwards;
-  top: 600px;
+  top: 652px;
   z-index: 3000;
 }
 
@@ -494,7 +501,6 @@ body {
 
 audio {
   position: absolute;
-  width: 100px;
 }
 
 .horizontal-animation {
@@ -522,25 +528,25 @@ audio {
 #d1 {
   animation: slide-left 2s;
   animation-delay: 36s;
-  background-color: white;
+  background-color: #ffcbf2;
 }
 
 #d2 {
   animation: slide-left 2s;
   animation-delay: 36300ms;
-  background-color: aquamarine;
+  background-color: #deaaff;
 }
 
 #d3 {
   animation: slide-left 2s;
   animation-delay: 36600ms;
-  background-color: burlywood;
+  background-color: #d0d1ff;
 }
 
 #d4 {
   animation: slide-left 2s;
   animation-delay: 36900ms;
-  background-color: coral;
+  background-color: #c0fdff;
 }
 
 @keyframes slide-left {
@@ -710,14 +716,14 @@ audio {
   animation: reveal 2s;
   animation-delay: 47500ms;
   animation-fill-mode: forwards;
-  top: -250px;
+  top: -164px;
 }
 
 #LCB2 {
   animation: reveal 2s;
   animation-delay: 52500ms;
   animation-fill-mode: forwards;
-  top: 50px;
+  top: 136px;
   left: -400px;
   z-index: 4902;
 }
@@ -726,7 +732,7 @@ audio {
   animation: reveal 2s;
   animation-delay: 52500ms;
   animation-fill-mode: forwards;
-  top: 50px;
+  top: 136px;
   left: 400px;
   z-index: 4902;
 }
@@ -735,7 +741,7 @@ audio {
   animation: reveal 2s;
   animation-delay: 54500ms;
   animation-fill-mode: forwards;
-  top: 250px;
+  top: 302px;
   z-index: 4904;
 }
 
@@ -743,7 +749,7 @@ audio {
   animation: reveal 2s;
   animation-delay: 56500ms;
   animation-fill-mode: forwards;
-  top: 450px;
+  top: 502px;
   left: -500px;
   z-index: 4906;
 }
@@ -752,7 +758,7 @@ audio {
   animation: reveal 2s;
   animation-delay: 59500ms;
   animation-fill-mode: forwards;
-  top: 450px;
+  top: 536px;
   left: 500px;
   z-index: 4906;
 }
@@ -761,7 +767,7 @@ audio {
   animation: reveal 2s;
   animation-delay: 64500ms;
   animation-fill-mode: forwards;
-  top: 600px;
+  top: 686px;
   z-index: 4909;
 }
 
@@ -790,25 +796,25 @@ audio {
 #dr1 {
   animation: slide-right 2s;
   animation-delay: 68s;
-  background-color: white;
+  background-color: #ffcbf2;
 }
 
 #dr2 {
   animation: slide-right 2s;
   animation-delay: 68300ms;
-  background-color: aquamarine;
+  background-color: #deaaff;
 }
 
 #dr3 {
   animation: slide-right 2s;
   animation-delay: 68600ms;
-  background-color: burlywood;
+  background-color: #d0d1ff;
 }
 
 #dr4 {
   animation: slide-right 2s;
   animation-delay: 68900ms;
-  background-color: coral;
+  background-color: #c0fdff;
 }
 
 @keyframes slide-right {
